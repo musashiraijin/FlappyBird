@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var scrollNode:SKNode!
+    
     // SKView上にシーンが表示されたときに呼ばれるメソッド
     override func didMoveToView(view: SKView) {
         
