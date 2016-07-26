@@ -13,6 +13,7 @@
 		2F77A2391D472E3F008853C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A2381D472E3F008853C2 /* Assets.xcassets */; };
 		2F77A23C1D472E3F008853C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F77A23A1D472E3F008853C2 /* LaunchScreen.storyboard */; };
 		2F77A2441D472FCA008853C2 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F77A2431D472FCA008853C2 /* SpriteKit.framework */; };
+		2F77A2461D4733B1008853C2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77A2451D4733B1008853C2 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2F77A23B1D472E3F008853C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F77A23D1D472E3F008853C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F77A2431D472FCA008853C2 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		2F77A2451D4733B1008853C2 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				2F77A2311D472E3F008853C2 /* AppDelegate.swift */,
 				2F77A2331D472E3F008853C2 /* ViewController.swift */,
+				2F77A2451D4733B1008853C2 /* GameScene.swift */,
 				2F77A2351D472E3F008853C2 /* Main.storyboard */,
 				2F77A2381D472E3F008853C2 /* Assets.xcassets */,
 				2F77A23A1D472E3F008853C2 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F77A2461D4733B1008853C2 /* GameScene.swift in Sources */,
 				2F77A2341D472E3F008853C2 /* ViewController.swift in Sources */,
 				2F77A2321D472E3F008853C2 /* AppDelegate.swift in Sources */,
 			);
