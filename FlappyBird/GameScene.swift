@@ -18,6 +18,9 @@ class GameScene: SKScene {
         scrollNode = SKNode()
         addChild(scrollNode)
         
+        wallNode = SKNode()
+        addChild(wallNode)
+        
         setupGround()
         setupCloud()
         setupWall()
