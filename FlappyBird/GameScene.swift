@@ -4,6 +4,10 @@ class GameScene: SKScene {
     
     var scrollNode:SKNode!
     
+    var bird:SKSpriteNode!
+    
+    var wallNode:SKNode!
+    
     // SKView上にシーンが表示されたときに呼ばれるメソッド
     override func didMoveToView(view: SKView) {
         
@@ -16,6 +20,9 @@ class GameScene: SKScene {
         
         setupGround()
         setupCloud()
+        setupWall()
+        setupBird()
+        
     }
     
     func setupGround() {
@@ -147,7 +154,6 @@ class GameScene: SKScene {
         
         runAction(repeatForeverAnimation)
     }
-    
     
     func setupBird() {
         // 鳥の画像を2種類読み込む
