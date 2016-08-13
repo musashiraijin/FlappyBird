@@ -1,19 +1,10 @@
-//
-//  ViewController.swift
-//  FlappyBird
-//
-//  Created by Musashi Raijin on 2016/07/26.
-//  Copyright © 2016年 masahiro.kitamura. All rights reserved.
-//
-
 import UIKit
 import SpriteKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // SKViewに型を変換する
         let skView = self.view as! SKView
@@ -30,12 +21,14 @@ class ViewController: UIViewController {
         // ビューにシーンを表示する
         skView.presentScene(scene)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // ステータスバーを消す --- ここから ---
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    } // --- ここまで追加 ---
 }
-
