@@ -275,6 +275,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
+        
+        setupScoreLabel()
+        
         // ゲームオーバーのときは何もしない
         if scrollNode.speed <= 0 {
             return
