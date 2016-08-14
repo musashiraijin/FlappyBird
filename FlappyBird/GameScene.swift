@@ -8,8 +8,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var wallNode:SKNode!
     
-    let userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-    
     // 衝突判定カテゴリー ↓追加
     let birdCategory: UInt32 = 1 << 0       // 0...00001
     let groundCategory: UInt32 = 1 << 1     // 0...00010
@@ -18,9 +16,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // スコア
     var score = 0
-    
     var scoreLabelNode:SKLabelNode!
     var bestScoreLabelNode:SKLabelNode!
+    let userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     
     // SKView上にシーンが表示されたときに呼ばれるメソッド
     override func didMoveToView(view: SKView) {
@@ -285,13 +284,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // スコア用の物体と衝突した
             print("ScoreUp")
             score += 1
-            scoreLabelNode.text = "Score:\(score)"
+            scoreLabelNode.text = "Score:\(score)" // ←追加
             
             // ベストスコア更新か確認する
             var bestScore = userDefaults.integerForKey("BEST")
             if score > bestScore {
                 bestScore = score
-                bestScoreLabelNode.text = "Best Score:\(bestScore)"
+                bestScoreLabelNode.text = "Best Score:\(bestScore)" // ←追加
                 userDefaults.setInteger(bestScore, forKey: "BEST")
                 userDefaults.synchronize()
             }
@@ -310,6 +309,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             })
         }
     }
+    
     
     func setupScoreLabel() {
         score = 0
@@ -331,5 +331,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bestScoreLabelNode.text = "Best Score:\(bestScore)"
         self.addChild(bestScoreLabelNode)
     }
-    
 }
